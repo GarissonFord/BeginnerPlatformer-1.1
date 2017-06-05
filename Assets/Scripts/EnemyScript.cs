@@ -11,7 +11,7 @@ public class EnemyScript : MonoBehaviour {
 
 	Rigidbody2D rb;
 	public float moveForce;
-	public float velocityx, velocityy;
+	//public float velocityx, velocityy;
 
 	// Use this for initialization
 	void Start () 
@@ -27,7 +27,7 @@ public class EnemyScript : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		//Okay so velocity works but not AddForce? Whatever I guess
+		//Okay so velocity works but not AddForce? Whatever I guessf
 		rb.velocity = new Vector2 (moveForce, rb.velocity.y);
 	}
 

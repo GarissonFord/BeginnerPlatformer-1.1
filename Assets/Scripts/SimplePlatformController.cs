@@ -89,4 +89,14 @@ public class SimplePlatformController : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.CompareTag ("Enemy")) 
+		{
+			anim.SetTrigger ("Die");
+			rb2d.velocity = Vector2.zero;
+			rb2d.angularVelocity = 0.0f;
+		}
+	}
 }
